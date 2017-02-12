@@ -2,15 +2,6 @@
  * ## - WordPress.com Specific Styles
  */
 
-
-// blog of the day
-#botd,
-#botd2 {
-
-	position: absolute;
-
-}
-
 // PollDaddy Embed
 .PDS_Poll {
 
@@ -49,13 +40,5 @@
 		margin-bottom: 0;
 
 	}
-
-}
-
-// audio player
-.wp-playlist,
-.mejs-container {
-
-	margin: ( $grid-line-height * $grid-line-height-multiplier ) 0;
 
 }

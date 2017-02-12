@@ -2,7 +2,7 @@
  * ## - Embeds
  */
 
-// shortcodes
+// Shortcodes.
 iframe {
 
 	&[src*="8tracks.com"],
@@ -35,5 +35,13 @@ object {
 
 	display: block;
 	margin: ( $grid-line-height * $grid-line-height-multiplier ) auto !important;
+
+}
+
+// audio player
+.wp-playlist,
+.mejs-container {
+
+	margin: ( $grid-line-height * $grid-line-height-multiplier ) 0;
 
 }
