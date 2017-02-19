@@ -316,6 +316,8 @@
 
 				@include post-meta-data;
 				opacity: $style-opacity-element;
+				display: block;
+				margin-bottom: $grid-line-height / 2;
 
 			}
 
