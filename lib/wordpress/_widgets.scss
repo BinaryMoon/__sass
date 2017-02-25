@@ -42,6 +42,16 @@
 
 	}
 
+	// These changes ensure iframes in widgets to not overflow the available
+	// space. This is particularly appropriate in social media widgets with
+	// fixed/ restricted widths.
+	iframe {
+
+		max-width: 100%;
+		min-width: 0 !important;
+
+	}
+
 	// milestone (countdown) widget
 	&.milestone-widget {
 
