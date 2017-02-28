@@ -1,7 +1,7 @@
 
 
 // calculate a colour to use for contrast based on the brightness of the background
-@function contrast($color) {
+@function contrast($color, $color-light: $canvas-white, $color-dark: $canvas-grey-100) {
 
 	@if ( brightness( $color ) < 65 ) {
 
