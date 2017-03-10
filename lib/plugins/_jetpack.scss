@@ -205,10 +205,9 @@ main div {
 		.blog-info,
 		.blog-credits {
 
-			line-height: $grid-line-height;
 			text-overflow: ellipsis;
 			white-space: nowrap;
-			@include modular-scale( eta );
+			@include modular-scale( eta, 2rem );
 
 			a {
 
@@ -404,6 +403,8 @@ div.jetpack-testimonial-shortcode {
 		&:after {
 
 			@include arrow-right( $style-breadcrumb-arrow, 0.4em );
+			right: $menu-link-padding / -2;
+			left: auto;
 
 		}
 	}
