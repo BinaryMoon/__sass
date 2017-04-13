@@ -302,7 +302,7 @@ div.jetpack-testimonial-shortcode {
 	.testimonial-entry {
 
 		margin: 0;
-		padding: $grid-line-height $grid-gutter;
+		padding: $grid-line-height ( $grid-gutter / 2 );
 
 	}
 
@@ -373,6 +373,22 @@ div.jetpack-testimonial-shortcode {
 			&:nth-of-type( 4n + 1 ) {
 
 				clear: both;
+
+			}
+
+		}
+
+	}
+
+	@include for-phone {
+
+		&.column-2,
+		&.column-3,
+		&.column-4 {
+
+			.testimonial-entry {
+
+				width: 100%;
 
 			}
 
