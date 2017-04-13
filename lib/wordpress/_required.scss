@@ -53,6 +53,14 @@ blockquote {
 
 		max-width: 40%;
 
+		@include for-phone {
+
+			max-width: 100%;
+			margin-left: 0;
+			margin-right: 0;
+
+		}
+
 	}
 
 }
