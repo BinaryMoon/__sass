@@ -59,6 +59,14 @@ video {
 
 }
 
+embed,
+iframe,
+object {
+
+	max-width: 100%;
+
+}
+
 button,
 a {
 
@@ -145,7 +153,7 @@ img {
 
 fieldset {
 
-	margin: 0;
+	margin: 0 0 $grid-line-height 0;
 	padding: $grid-line-height ( $grid-gutter / 2 );
 
 }
@@ -243,6 +251,7 @@ acronym,
 abbr {
 
 	border-bottom: $style-outline;
+	cursor: help;
 
 }
 
