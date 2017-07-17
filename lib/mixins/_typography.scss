@@ -4,6 +4,10 @@
 
 	$font-sizes-final: map-merge(
 		(
+			// Base size. Only used by html and body elements.
+			base: ( size: 1rem, height: 1.75 ),
+
+			// Other sizes using a modular scale.
 			giga: ( size: 6.25rem, height: 1 ),
 			mega: ( size: 5rem, height: 1.25 ),
 			alpha: ( size: 4rem, height: 1.25 ),
@@ -22,7 +26,7 @@
 	$size: map_get( $font, size );
 
 	@if ( $line-height == null ) {
-		$line-height: map_get( $font, height );		
+		$line-height: map_get( $font, height );
 	}
 
 	font-size: convert-unit( $size * $font-base, 'px' );
@@ -35,7 +39,7 @@
 // used in both website styles and editor styles
 @mixin body() {
 
-	@include modular-scale( zeta );
+	@include modular-scale( base );
 	font-weight: $font-weight;
 	font-family: $font-family-body;
 	color: $body-copy-color;
