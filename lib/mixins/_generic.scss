@@ -19,10 +19,16 @@
 }
 
 // left arrow
-@mixin arrow-left( $colour: $canvas-grey-20, $border-size: $style-arrow-default-size ) {
+@mixin arrow-left( $colour: $canvas-grey-20, $border-size: $style-arrow-default-size, $position: null ) {
 
 	@include arrow( $border-size );
-	left: -2 * $border-size;
+
+	@if ( $position ) {
+		left: $position;
+	} @else {
+		left: -2 * $border-size;
+	}
+
 	right: auto;
 	top: 50%;
 	margin-top: -$border-size;
@@ -34,10 +40,16 @@
 }
 
 // right arrow
-@mixin arrow-right( $colour: $canvas-grey-20, $border-size: $style-arrow-default-size ) {
+@mixin arrow-right( $colour: $canvas-grey-20, $border-size: $style-arrow-default-size, $position: null ) {
 
 	@include arrow( $border-size );
-	right: -2 * $border-size;
+
+	@if ( $position ) {
+		right: $position;
+	} @else {
+		right: -2 * $border-size;
+	}
+
 	left: auto;
 	top: 50%;
 	margin-top: -$border-size;
