@@ -21,6 +21,14 @@
 
 }
 
+@mixin for-big-tablet {
+
+	@media only screen and (max-width: 1000px) {
+		@content;
+	}
+
+}
+
 @mixin for-desktop {
 
 	@media only screen and (max-width: 1200px) {
