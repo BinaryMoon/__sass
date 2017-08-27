@@ -15,7 +15,7 @@
 		text-align: center;
 		margin: 0 0 ( $grid-line-height ) 0;
 		vertical-align: top;
-		padding: 0 ( $grid-gutter / 2 );
+		padding: 0 ( $grid-gutter / 4 );
 
 		.gallery-icon {
 
@@ -32,7 +32,7 @@
 
 		.gallery-caption {
 
-			padding: 0 ( $grid-gutter / 4 );
+			padding: 0;
 			margin: 0;
 			@include modular-scale( eta );
 			font-style: italic;
