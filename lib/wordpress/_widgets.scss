@@ -116,6 +116,17 @@
 
 	}
 
+	// Jetpack subscription widget.
+	&.jetpack_subscription_widget {
+
+		#subscribe-email input {
+
+			width: 100%;
+
+		}
+
+	}
+
 	// recent comments
 	&.widget_recent_comments {
 
@@ -128,6 +139,7 @@
 			td {
 
 				padding-bottom: ( $grid-line-height / 2 );
+				border: none;
 
 				&.recentcommentsavatarend,
 				&.recentcommentsavatartop {
@@ -149,9 +161,12 @@
 			tr:nth-child( odd ) {
 
 				background: transparent;
+				border: none;
 
 			}
+
 		}
+
 	}
 
 	// blogs I follow listing
@@ -363,6 +378,13 @@
 
 	// blog subscription widget
 	&.widget_blog_subscription {
+
+		input[type=text] {
+
+			width: 100% !important;
+			padding: ( $grid-line-height / 2 ) ( $grid-gutter / 2 ) !important;
+
+		}
 
 		input[type=text],
 		input[type=submit],
