@@ -107,8 +107,9 @@ samp {
 
 q {
 
-	background: $canvas-grey-5;
+	background: rgba( $canvas-grey-50, 0.5 );
 	quotes: "\201C" "\201D" "\2018" "\2019";
+	padding: 0 0.25em;
 
 }
 
