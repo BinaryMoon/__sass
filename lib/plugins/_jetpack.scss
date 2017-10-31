@@ -403,6 +403,13 @@ div.jetpack-testimonial-shortcode {
 
 	margin-bottom: $grid-line-height / 2;
 
+	> a,
+	> span {
+
+		display: inline-block;
+
+	}
+
 	a {
 
 		font-weight: bold;
@@ -423,7 +430,9 @@ div.jetpack-testimonial-shortcode {
 			left: auto;
 
 		}
+
 	}
+
 }
 
 
