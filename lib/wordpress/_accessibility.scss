@@ -5,13 +5,17 @@
 /* Text meant only for screen readers. */
 .screen-reader-text {
 
+	border: 0;
 	clip: rect( 1px, 1px, 1px, 1px );
+	clip-path: inset(50%);
 	position: absolute !important;
+	padding: 0;
+	margin: -1px;
 	height: 1px;
 	width: 1px;
 	overflow: hidden;
 	word-wrap: normal !important;
-
+		
 	&:focus {
 
 		@include modular-scale( epsilon );
