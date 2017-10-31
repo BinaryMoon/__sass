@@ -127,6 +127,27 @@
 
 	}
 
+@if $support_accessible_tagcloud {
+
+	// Tagcloud.
+	&.tagcloud {
+
+		ul {
+
+			list-style-type: none;
+
+			li {
+
+				display: inline-block;
+
+			}
+
+		}
+
+	}
+
+}
+
 	// recent comments
 	&.widget_recent_comments {
 
