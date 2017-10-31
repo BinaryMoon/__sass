@@ -45,3 +45,10 @@ object {
 	margin: ( $grid-line-height * $grid-line-height-multiplier ) 0;
 
 }
+
+// Remove bottom on embeds that wrapped in paragraphs via wpautop.
+p > embed:only-child,
+p > iframe:only-child,
+p > object:only-child {
+	margin-bottom: 0;
+}
