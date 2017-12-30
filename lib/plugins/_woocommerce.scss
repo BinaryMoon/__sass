@@ -28,6 +28,13 @@
 
 	}
 
+	.woocommerce-MyAccount-navigation-link.is-active {
+
+		font-weight: bold;
+		text-decoration: underline;
+
+	}
+
 	span.onsale {
 
 		z-index: 1;
@@ -55,13 +62,42 @@
 		margin-bottom: $grid-line-height;
 		line-height: $grid-line-height;
 
-		@include button;
+		@extend input.text;
+
+		width: auto;
+
+		@include button( $canvas-grey-10 );
 
 		&.alt {
 
-			@include button( $link-color );
+			@include button( $canvas-color, epsilon );
+			width: 100%;
 
 		}
+
+	}
+
+	#respond input#submit,
+	a.button,
+	button.button,
+	input.button {
+
+		&.disabled,
+		&:disabled,
+		&:disabled[disabled] {
+
+			padding: ( $grid-line-height / 2 ) ( $grid-gutter / 2 );
+
+		}
+
+	}
+
+	#coupon_code {
+
+		@extend input.text;
+
+		max-width: 12em;
+		line-height: 1;
 
 	}
 
@@ -147,24 +183,66 @@
 
 	}
 
-	table.shop_table {
+	table {
 
-		border: none;
+		table-layout: auto;
 
-		td {
+		.product-remove {
 
-			border: none;
+			width: 1em;
 
 		}
 
+		.product-name {
+
+			width: 50%;
+
+		}
+
+		.product-thumbnail {
+
+			width: 6em;
+
+			img {
+
+				width: 100%;
+
+			}
+
+		}
+
+		&.cart input {
+
+			#add_payment_method &,
+			.woocommerce-cart &,
+			.woocommerce-checkout & {
+
+			line-height: $grid-line-height;
+
+			}
+
+		}
+
+		&.shop_table {
+
+			border: none;
+
+			td {
+
+				border: none;
+
+			}
+
+		}
+
+
 	}
+
 
 }
 
 // Navigation widget
-.woocommerce-cart-button {
-
-	float: right;
+li.woocommerce-cart-button {
 
 	.cart-contents {
 
@@ -190,6 +268,88 @@
 
 			}
 		}
+
+	}
+
+	ul.woocommerce-mini-cart {
+
+		// TODO: Let's see if we can work out how to remove this.
+		width: auto !important;
+		margin-bottom: $grid-line-height / 2;
+
+		a {
+
+			padding: 0;
+
+		}
+
+	}
+
+	ul.woocommerce-cart-widget {
+
+		width: 20rem;
+
+	}
+
+	li div.widget_shopping_cart {
+
+		padding: ( $grid-line-height / 2 ) ( $grid-gutter / 2 );
+		margin: 0;
+
+		ul {
+
+			position: relative;
+			left: auto;
+			right: auto;
+
+		}
+
+		p.buttons {
+
+			margin: 0;
+
+			a {
+
+				margin: 0 0 ( $grid-line-height / 2 ) 0;
+				@include modular-scale( eta );
+
+			}
+
+		}
+
+		.total {
+
+			border-top: $border-width solid rgba( $canvas-white, 0.5 );
+			padding: ( $grid-line-height / 2 ) 0 0 0;
+			text-align: center;
+
+		}
+
+		.remove {
+
+			line-height: 1em;
+
+			&:hover {
+
+				text-decoration: none !important;
+
+			}
+
+		}
+
+	}
+
+}
+
+.woocommerce-store-notice,
+p.demo_store {
+
+	background: $canvas-color;
+	color: contrast( $canvas-color );
+
+	a {
+
+		color: contrast( $canvas-color );
 
 	}
 
