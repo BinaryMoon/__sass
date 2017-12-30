@@ -75,6 +75,7 @@
 				position: absolute;
 				width: $menu-dropdown-width;
 				background: $menu-color;
+				color: contrast( $menu-color );
 				left: -999em;
 
 				// Invisible hotspot that makes it easier to select sub menu items.
@@ -113,7 +114,8 @@
 					display: block;
 					float: none;
 
-					a {
+					a:not(.button) {
+
 						color: $foreground-color;
 
 						&:focus,
@@ -311,23 +313,27 @@
 			li a,
 			a {
 
-				padding: ( $grid-line-height / 4 ) 0;
-				color: $link-color;
-				background: transparent;
+				&:not(.button) {
 
-				&:focus,
-				&:hover {
-
+					padding: ( $grid-line-height / 4 ) 0;
 					color: $link-color;
 					background: transparent;
-					text-decoration: underline;
 
-				}
+					&:focus,
+					&:hover {
 
-				&:before,
-				&:after {
+						color: $link-color;
+						background: transparent;
+						text-decoration: underline;
 
-					display: none;
+					}
+
+					&:before,
+					&:after {
+
+						display: none;
+
+					}
 
 				}
 
@@ -335,11 +341,15 @@
 
 			&.icon {
 
-				a {
+				&:not(.button) {
 
-					&:before {
+					a {
 
-						display: inline-block;
+						&:before {
+
+							display: inline-block;
+
+						}
 
 					}
 
