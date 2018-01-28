@@ -1,4 +1,5 @@
-/**!
+
+/*!
  * ## - Accessibility
  */
 
@@ -15,7 +16,7 @@
 	width: 1px;
 	overflow: hidden;
 	word-wrap: normal !important;
-		
+
 	&:focus {
 
 		@include modular-scale( epsilon );
