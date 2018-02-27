@@ -2,7 +2,7 @@
 /*!
  * ## - Animations
  * Use with: @include animation( animationName duration );
- * eg: @include animation( faded-in 0.3s );
+ * eg: @include animation( fade-in 0.3s );
  */
 
 @include keyframes( fade-in ) {
