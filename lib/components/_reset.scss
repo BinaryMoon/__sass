@@ -283,3 +283,14 @@ svg path {
 	width: device-width;
 
 }
+
+@media (prefers-reduced-motion: reduce) {
+
+	* {
+
+		animation: none !important;
+		transition: none !important;
+
+	}
+
+}
