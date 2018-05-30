@@ -203,6 +203,7 @@
 
 	p.form-submit {
 
+		margin-top: $grid-line-height / 2;
 		margin-bottom: $grid-line-height / 2;
 
 	}
@@ -213,6 +214,7 @@
 
 	}
 
+	p.comment-form-cookies-consent,
 	p.post-subscription-form,
 	p.comment-subscription-form {
 
