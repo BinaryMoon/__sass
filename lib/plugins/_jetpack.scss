@@ -474,3 +474,22 @@ form.contact-form {
 	}
 
 }
+
+// Cookie Consent.
+body #eu-cookie-law {
+
+	padding: ( $grid-line-height / 2 ) ( $grid-gutter / 2 );
+	@include modular-scale( eta );
+
+	&.positive,
+	&.negative {
+
+		input {
+
+			@include button( $canvas-color, eta );
+
+		}
+
+	}
+
+}
