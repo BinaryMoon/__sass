@@ -86,6 +86,19 @@ a {
 
 }
 
+a {
+
+	background-color: transparent;
+
+}
+
+b,
+strong {
+
+	font-weight: bolder;
+
+}
+
 hr {
 
 	box-sizing: content-box;
@@ -176,9 +189,9 @@ textarea {
 }
 
 button,
-html input[type="button"],
-input[type="reset"],
-input[type="submit"] {
+[type="button"],
+[type="reset"],
+[type="submit"] {
 
 	appearance: button;
 	cursor: pointer;
@@ -192,15 +205,22 @@ html input[disabled] {
 
 }
 
-input[type="checkbox"],
-input[type="radio"] {
+[type="checkbox"],
+[type="radio"] {
 
 	padding: 0;
 
 }
 
-input[type="search"],
-input.searchfield {
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+
+	height: auto;
+
+}
+
+[type="search"],
+.searchfield {
 
 	appearance: textfield;
 
@@ -220,8 +240,14 @@ input.searchfield {
 
 }
 
-button::-moz-focus-inner,
-input::-moz-focus-inner {
+::-webkit-file-upload-button {
+
+	appearance: button;
+	font: inherit;
+
+}
+
+::-moz-focus-inner {
 
 	border: 0;
 	padding: 0;
