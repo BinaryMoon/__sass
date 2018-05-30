@@ -20,7 +20,6 @@ h6 {
 	color: $body-header-color;
 	font-family: $font-family-header;
 	font-weight: $font-weight;
-	margin: 0 0 ( $grid-line-height * $line-height-margin-multiplier ) 0;
 
 	a {
 
@@ -81,15 +80,12 @@ h6 {
 
 hr {
 
-	margin: ( $grid-line-height * $grid-line-height-multiplier ) auto;
 	border: none;
 	border-bottom: $border-width solid $border-color;
 
 }
 
 p {
-
-	margin: 0 0 ( $grid-line-height * $line-height-margin-multiplier ) 0;
 
 	// hide empty paragraphs
 	&:empty {
@@ -102,7 +98,6 @@ p {
 
 pre {
 
-	margin: ( $grid-line-height * $grid-line-height-multiplier ) 0;
 	background: $canvas-pre-background;
 	color: $canvas-pre-color;
 	padding: $grid-line-height $style-element-spacing;
