@@ -1,0 +1,41 @@
+
+/*!
+ * ## - Blocks
+ */
+
+// Remove auto margin from browser figures.
+.wp-block-image {
+
+	margin: 0;
+
+}
+
+.wp-block-quote {
+
+	@include blockquote;
+
+}
+
+.wp-block-image {
+
+	margin-bottom: $grid-line-height;
+
+	img {
+
+		display: block;
+
+	}
+
+	&.alignfull {
+
+		width: 100%;
+
+		img {
+
+			width: 100%;
+
+		}
+
+	}
+
+}
