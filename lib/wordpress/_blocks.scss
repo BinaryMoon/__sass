@@ -10,6 +10,7 @@
 
 }
 
+.wp-block-pullquote,
 .wp-block-quote {
 
 	@include blockquote;
@@ -18,7 +19,7 @@
 
 .wp-block-image {
 
-	margin-bottom: $grid-line-height;
+	margin-bottom: $grid-line-height * $grid-line-height-multiplier;
 
 	img {
 
