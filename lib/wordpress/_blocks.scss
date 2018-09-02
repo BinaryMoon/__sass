@@ -3,6 +3,13 @@
  * ## - Blocks
  */
 
+ p.wp-block-subhead {
+
+	@include modular-scale( epsilon );
+	opacity: 1;
+
+ }
+
 // Remove auto margin from browser figures.
 .wp-block-image {
 
@@ -11,9 +18,32 @@
 }
 
 .wp-block-pullquote,
-.wp-block-quote {
+.wp-block-quote,
+.wp-block-quote.is-large {
 
 	@include blockquote;
+
+	cite {
+
+		@include post-cite;
+
+	}
+
+}
+
+.wp-block-quote.is-large {
+
+	@include modular-scale( delta );
+
+}
+
+.wp-block-audio {
+
+	audio {
+
+		width: 100%;
+
+	}
 
 }
 
@@ -27,6 +57,16 @@
 
 	}
 
+	&.is-resized {
+
+		img {
+
+			max-width: 100%;
+
+		}
+
+	}
+
 	&.alignfull {
 
 		width: 100%;
@@ -34,6 +74,44 @@
 		img {
 
 			width: 100%;
+
+		}
+
+	}
+
+}
+
+.wp-block-cover-image {
+
+	&.alignleft,
+	&.alignright,
+	&.aligncenter {
+
+		display: flex;
+
+	}
+
+}
+
+
+.wp-block-columns {
+
+	.wp-block-column {
+
+		padding-left: $grid-gutter / 4;
+		padding-right: $grid-gutter / 4;
+
+		&:first-child {
+
+			padding-left: 0;
+			padding-right: $grid-gutter / 4;
+
+		}
+
+		&:last-child {
+
+			padding-right: 0;
+			padding-left: $grid-gutter / 4;
 
 		}
 
