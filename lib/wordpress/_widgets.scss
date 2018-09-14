@@ -5,10 +5,11 @@
 
 .widget {
 
-	overflow:hidden;
+	overflow: hidden;
 	margin-bottom: $grid-line-height * $grid-line-height-multiplier;
 	width: 100%;
 	@include wrap-text;
+	word-break: break-all;
 
 	.form-select {
 
