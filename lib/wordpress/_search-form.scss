@@ -26,6 +26,7 @@ form.search-form {
 		border: none;
 		padding: 0 $style-spacing;
 		opacity: 1;
+		box-shadow: none;
 		@include transition;
 
 		.icon {
