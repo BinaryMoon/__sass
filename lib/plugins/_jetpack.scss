@@ -45,7 +45,7 @@ main {
 	#jp-post-flair {
 
 		clear: both;
-		margin: ( $grid-line-height * $grid-line-height-multiplier ) 0;
+		margin: 0 0 ( $grid-line-height * $grid-line-height-multiplier ) 0;
 		padding: 0;
 
 	}
@@ -496,9 +496,21 @@ body #eu-cookie-law {
 
 }
 
-// Popular posts thumbnails.
-body .widgets-list-layout img.widgets-list-layout-blavatar {
+body {
 
-	max-width: 100%;
+	// Popular posts thumbnails.
+	.widgets-list-layout img.widgets-list-layout-blavatar {
+
+		max-width: 100%;
+
+	}
+
+	// Jetpack social icons.
+	.jetpack-social-navigation ul {
+
+		margin-bottom: $grid-line-height;
+
+	}
 
 }
+
