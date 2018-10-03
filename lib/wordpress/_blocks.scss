@@ -26,6 +26,8 @@
 	cite {
 
 		@include post-cite;
+		margin-top: $grid-line-height / 2;
+		display: block;
 
 	}
 
