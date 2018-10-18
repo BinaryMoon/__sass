@@ -25,3 +25,6 @@ $body-header-color: $canvas-grey-100 !default;
 
 // font scale - uses custom scale designed to keep font sizes as round pixel values
 $font-sizes: () !default;
+
+$blockquote-size: epsilon !default;
+$blockquote-size-large: delta !default;
