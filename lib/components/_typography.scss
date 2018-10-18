@@ -85,17 +85,6 @@ hr {
 
 }
 
-p {
-
-	// hide empty paragraphs
-	&:empty {
-
-		display: none;
-
-	}
-
-}
-
 pre {
 
 	background: $canvas-pre-background;
