@@ -36,6 +36,36 @@
 .wp-block-quote.is-large {
 
 	@include modular-scale( delta );
+.wp-block-separator {
+
+	width: 10rem;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 100%;
+	border-bottom-width: $border-width;
+	border-color: $border-color;
+
+	&.is-style-wide {
+
+		width: 20rem;
+		border-bottom-width: $border-width;
+
+	}
+
+	&.is-style-dots {
+
+		&:before {
+
+			font-size: 2rem;
+			letter-spacing: 1em;
+			padding-left: 1em;
+			padding-right: 0;
+			line-height: 0;
+			color: $border-color;
+
+		}
+
+	}
 
 }
 
