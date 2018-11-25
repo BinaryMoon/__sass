@@ -54,7 +54,7 @@
 		footer {
 
 			@include clear;
-			margin-bottom: $grid-line-height / 2;
+			margin-bottom: ( $grid-line-height / 2 );
 
 			.avatar {
 
@@ -78,7 +78,7 @@
 
 				display: inline-block;
 				font-weight: bold;
-				margin-top: $grid-line-height / 4;
+				margin-top: ( $grid-line-height / 4 );
 
 			}
 
@@ -203,8 +203,8 @@
 
 	p.form-submit {
 
-		margin-top: $grid-line-height / 2;
-		margin-bottom: $grid-line-height / 2;
+		margin-top: ( $grid-line-height / 2 );
+		margin-bottom: ( $grid-line-height / 2 );
 
 	}
 

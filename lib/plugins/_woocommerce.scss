@@ -276,7 +276,7 @@ li.woocommerce-cart-button {
 
 		// TODO: Let's see if we can work out how to remove this.
 		width: auto !important;
-		margin-bottom: $grid-line-height / 2;
+		margin-bottom: ( $grid-line-height / 2 );
 
 		a {
 

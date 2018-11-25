@@ -3,12 +3,12 @@
  * ## - Blocks
  */
 
- p.wp-block-subhead {
+p.wp-block-subhead {
 
 	@include modular-scale( epsilon );
 	opacity: 1;
 
- }
+}
 
 // Remove auto margin from browser figures.
 .wp-block-image {
@@ -17,7 +17,7 @@
 
 }
 
-.wp-block-pullquote,
+.wp-block-pullquote blockquote,
 .wp-block-quote,
 .wp-block-quote.is-large {
 
@@ -26,7 +26,7 @@
 
 	cite {
 
-		margin-top: $grid-line-height / 2;
+		margin-top: ( $grid-line-height / 2 );
 		display: block;
 		@include post-cite;
 
@@ -148,20 +148,20 @@
 
 	.wp-block-column {
 
-		padding-left: $grid-gutter / 4;
-		padding-right: $grid-gutter / 4;
+		padding-left: ( $grid-gutter / 4 );
+		padding-right: ( $grid-gutter / 4 );
 
 		&:first-child {
 
 			padding-left: 0;
-			padding-right: $grid-gutter / 4;
+			padding-right: ( $grid-gutter / 4 );
 
 		}
 
 		&:last-child {
 
 			padding-right: 0;
-			padding-left: $grid-gutter / 4;
+			padding-left: ( $grid-gutter / 4 );
 
 		}
 

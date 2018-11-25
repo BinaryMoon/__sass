@@ -329,7 +329,8 @@ div.jetpack-testimonial-shortcode {
 
 			max-height: $grid-line-height;
 			width: auto;
-			margin-right: $grid-gutter / 3;
+			margin-right: ( $grid-gutter / 3 );
+			margin-left: 0;
 
 		}
 
@@ -404,7 +405,7 @@ div.jetpack-testimonial-shortcode {
 // breadcrumbs
 .entry-breadcrumbs {
 
-	margin-bottom: $grid-line-height / 2;
+	margin-bottom: ( $grid-line-height / 2 );
 
 	> a,
 	> span {

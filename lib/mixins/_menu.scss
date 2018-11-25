@@ -367,7 +367,7 @@
 				box-shadow: none;
 				width: 100%;
 				margin: 0;
-				padding-left: $grid-gutter / 2;
+				padding-left: ( $grid-gutter / 2 );
 				list-style-type: $style-list-style-type;
 				z-index: layer( base );
 

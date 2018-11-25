@@ -9,7 +9,7 @@ $grid-columns: 12 !default;
 $grid-gutter: 3rem !default;
 
 // column gutter size as proportion of individual column width
-$grid-column-gutter: 1 / 2 !default;
+$grid-column-gutter: ( 1 / 2 ) !default;
 
 // vertical spacing
 $grid-line-height: 1.5rem !default;

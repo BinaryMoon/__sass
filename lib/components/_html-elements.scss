@@ -14,7 +14,7 @@ ul {
 	ul,
 	li + li {
 
-		margin-top: $grid-line-height / 4;
+		margin-top: ( $grid-line-height / 4 );
 		margin-bottom: 0;
 
 	}

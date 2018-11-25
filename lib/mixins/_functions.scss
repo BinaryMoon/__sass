@@ -32,7 +32,7 @@
 
 	$number: sqrt( ( ($red-component * $red-component * $red-magic-number ) + ( $green-component * $green-component * $green-magic-number ) + ( $blue-component * $blue-component * $blue-magic-number ) ) / $brightness-divisor );
 
-	@return 100% * $number / 255;
+	@return ( 100% * $number / 255 );
 
 }
 
