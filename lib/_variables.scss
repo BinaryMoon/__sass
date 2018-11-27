@@ -1,9 +1,12 @@
 // Helper variables. Can be overriden per project by including this file AFTER your overrides
+// Needed first since other imports rely on these properties.
+@import "variables/_grid";
+
+// Import in any order.
 @import "variables/_colours";
 @import "variables/_typography";
 @import "variables/_comments";
 @import "variables/_forms";
-@import "variables/_grid";
 @import "variables/_library";
 @import "variables/_menu";
 @import "variables/_styles";
