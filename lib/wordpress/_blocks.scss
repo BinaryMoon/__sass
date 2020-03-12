@@ -3,6 +3,36 @@
  * ## - Blocks
  */
 
+.wp-block-cover,
+.alignfull,
+.alignwide,
+.wp-block-pullquote,
+.wp-block-quote,
+.wp-block-gallery,
+.wp-block-media-text__media {
+
+	margin-bottom: $grid-line-height * $grid-line-height-multiplier;
+
+}
+
+.alignfull {
+
+	.alignfull,
+	.alignwide {
+
+		margin-inline-start: 0;
+
+	}
+
+	.alignfull {
+
+		width: 100%;
+		max-width: 100%;
+
+	}
+
+}
+
 p.wp-block-subhead {
 
 	@include modular-scale( epsilon );
@@ -17,11 +47,9 @@ p.wp-block-subhead {
 
 }
 
-.wp-block-pullquote blockquote,
-.wp-block-quote,
-.wp-block-quote.is-large {
+.wp-block-pullquote,
+.wp-block-quote {
 
-	margin-bottom: $grid-line-height * $grid-line-height-multiplier;
 	@include blockquote;
 
 	cite {
@@ -29,6 +57,19 @@ p.wp-block-subhead {
 		margin-top: ( $grid-line-height / 2 );
 		display: block;
 		@include post-cite;
+
+	}
+
+}
+
+figure.wp-block-pullquote {
+
+	padding: 0;
+
+	// If the blockquote is inside a wrapper then remove the margin.
+	blockquote {
+
+		margin: 0;
 
 	}
 
@@ -101,7 +142,7 @@ p.wp-block-subhead {
 
 	margin-bottom: $grid-line-height * $grid-line-height-multiplier;
 
-	img {
+	> img {
 
 		display: block;
 
@@ -109,7 +150,7 @@ p.wp-block-subhead {
 
 	&.is-resized {
 
-		img {
+		> img {
 
 			max-width: 100%;
 
@@ -121,7 +162,7 @@ p.wp-block-subhead {
 
 		width: 100%;
 
-		img {
+		> img {
 
 			width: 100%;
 
@@ -143,6 +184,15 @@ p.wp-block-subhead {
 
 }
 
+.wp-block-social-links {
+
+	li {
+
+		margin-top: 0;
+
+	}
+
+}
 
 .wp-block-columns {
 
