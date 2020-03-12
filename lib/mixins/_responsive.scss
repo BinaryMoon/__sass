@@ -45,6 +45,14 @@
 
 }
 
+@mixin for-size( $size ) {
+
+	@media only screen and ( max-width: #{$size} ) {
+		@content;
+	}
+
+}
+
 @mixin for-print {
 
 	@media print {
