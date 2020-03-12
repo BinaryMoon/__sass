@@ -37,7 +37,7 @@ input.settings-input {
 	min-height: $grid-line-height;
 	width: 100%;
 	border-radius: $border-radius;
-	background: $form-input-background;
+	background-color: $form-input-background;
 	border: $border-width solid $form-input-border-color;
 
 	@if ( $form-input-border-width != null ) {
@@ -56,7 +56,7 @@ input.settings-input {
 
 		outline: none;
 		border-color: $form-input-border-focus;
-		background: $canvas-white;
+		background-color: $canvas-white;
 		color: $canvas-grey-90;
 
 	}
@@ -90,13 +90,6 @@ input.settings-input {
 		color: $form-input-foreground-color;
 
 	}
-
-}
-
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
-
-	appearance: none;
 
 }
 
