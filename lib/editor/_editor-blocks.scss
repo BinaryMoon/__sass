@@ -1,0 +1,34 @@
+@import "../_variables";
+@import "../_mixins";
+
+body.block-editor-page div.editor-post-title__block {
+
+	.editor-post-title__input {
+
+		font-family: $block-title-font;
+		font-size: $block-title-size;
+		font-weight: $block-title-weight;
+		text-align: $block-title-align;
+
+	}
+
+}
+
+.editor-rich-text__tinymce.mce-content-body {
+
+	line-height: inherit;
+
+}
+
+.wp-block {
+
+	max-width: $block-content-width;
+
+	.wp-block[data-align="full"] {
+
+		margin-left: 0;
+		margin-right: 0;
+
+	}
+
+}
