@@ -67,13 +67,9 @@
 
 }
 
-.wp-block-group {
+.has-background {
 
-	&.has-background {
-
-		padding: $grid-line-height $grid-gutter;
-
-	}
+	padding: $grid-line-height $grid-gutter;
 
 }
 
@@ -94,6 +90,24 @@ p.wp-block-subhead {
 		margin-top: ( $grid-line-height / 2 );
 		display: block;
 		@include post-cite;
+
+	}
+
+	&.is-style-solid-color {
+
+		blockquote {
+
+			background: $canvas-color;
+			color: contrast( $canvas-color );
+
+			p {
+
+				font-weight: bold;
+				color: inherit;
+
+			}
+
+		}
 
 	}
 
