@@ -9,6 +9,7 @@ body.block-editor-page div.editor-post-title__block {
 		font-size: $block-title-size;
 		font-weight: $block-title-weight;
 		text-align: $block-title-align;
+		color: $block-title-color;
 
 	}
 
@@ -28,6 +29,20 @@ body.block-editor-page div.editor-post-title__block {
 
 		margin-left: 0;
 		margin-right: 0;
+		max-width: 100%;
+
+	}
+
+}
+
+[data-align="wide"],
+[data-align="full"] {
+
+	[data-align="wide"],
+	[data-align="full"] {
+
+		padding-left: ( $grid-gutter / 2 );
+		padding-right: ( $grid-gutter / 2 );
 
 	}
 

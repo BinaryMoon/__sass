@@ -1,4 +1,10 @@
 
 @import "../_variables";
 @import "../_mixins";
-@import "../wordpress/_blocks";
+@import "../components/_typography";
+
+body {
+
+	@import "../wordpress/_blocks";
+
+}

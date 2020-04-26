@@ -3,16 +3,21 @@
  * ## - Blocks
  */
 
-.wp-block-cover,
 .alignfull,
 .alignwide,
-.wp-block-pullquote,
-.wp-block-group,
-.wp-block-quote,
+.wp-block-archives,
+.wp-block-button,
+.wp-block-calendar,
+.wp-block-categories,
+.wp-block-cover,
 .wp-block-gallery,
-.wp-block-media-text__media {
+.wp-block-group,
+.wp-block-media-text__media,
+.wp-block-pullquote,
+.wp-block-quote,
+.wp-block-search {
 
-	margin-bottom: $grid-line-height * $grid-line-height-multiplier;
+	margin-bottom: $grid-line-height;
 
 }
 
@@ -29,19 +34,49 @@
 
 }
 
+.alignwide,
 .alignfull {
+
+	clear: both;
+	width: 100%;
 
 	.alignfull,
 	.alignwide {
 
 		margin-inline-start: 0 !important;
+		width: 100% !important;
+		max-width: 100% !important;
 
 	}
 
-	.alignfull {
+}
 
-		width: 100% !important;
-		max-width: 100% !important;
+.alignfull {
+
+	.wp-block-columns {
+
+		&:not(.alignwide),
+		&:not(.alignfull) {
+
+			max-width: $grid-total-width;
+			margin-left: auto;
+			margin-right: auto;
+
+		}
+
+	}
+
+}
+
+.singular article {
+
+	h1, h2, h3, h4, h5, h6 {
+
+		&:not(.alignright):not(.alignleft) {
+
+			clear: both;
+
+		}
 
 	}
 
@@ -67,9 +102,23 @@
 
 }
 
-.has-background {
+.wp-block-cover,
+.wp-block-columns,
+.wp-block-group {
 
-	padding: $grid-line-height $grid-gutter;
+	&.has-background {
+
+		padding: $grid-line-height ( $grid-gutter / 2 );
+
+	}
+
+	&.alignfull,
+	&.alignfull:not(.has-background) .wp-block-columns {
+
+		padding-left: ( $grid-gutter / 2 );
+		padding-right: ( $grid-gutter / 2 );
+
+	}
 
 }
 
@@ -83,8 +132,16 @@ p.wp-block-subhead {
 .wp-block-pullquote,
 .wp-block-quote {
 
-	@include blockquote;
+	margin-top: 0;
+	margin-bottom: $grid-line-height;
 
+	blockquote {
+
+		@include blockquote;
+
+	}
+
+	.wp-block-quote__citation,
 	cite {
 
 		margin-top: ( $grid-line-height / 2 );
@@ -99,6 +156,8 @@ p.wp-block-subhead {
 
 			background: $canvas-color;
 			color: contrast( $canvas-color );
+			margin-left: auto;
+			margin-right: auto;
 
 			p {
 
@@ -106,6 +165,27 @@ p.wp-block-subhead {
 				color: inherit;
 
 			}
+
+			.wp-block-quote__citation,
+			cite {
+
+				color: inherit;
+
+			}
+
+		}
+
+	}
+
+	&.is-style-large {
+
+		padding: ( $grid-line-height ) ( $grid-gutter / 2 );
+		margin-bottom: $grid-line-height;
+
+		.wp-block-quote__citation,
+		cite {
+
+			text-align: inherit;
 
 		}
 
@@ -116,6 +196,7 @@ p.wp-block-subhead {
 figure.wp-block-pullquote {
 
 	padding: 0;
+	margin-bottom: $grid-line-height;
 
 	// If the blockquote is inside a wrapper then remove the margin.
 	blockquote {
@@ -126,7 +207,17 @@ figure.wp-block-pullquote {
 
 }
 
-.wp-block-quote{
+.wp-block-search {
+
+	input {
+
+		margin: 0;
+
+	}
+
+}
+
+.wp-block-quote {
 
 	p {
 
@@ -146,8 +237,19 @@ figure.wp-block-pullquote {
 
 }
 
+.wp-block-audio {
+
+	audio {
+
+		min-width: 200px;
+
+	}
+
+}
+
 .wp-block-separator {
 
+	clear: both;
 	width: 10rem;
 	margin-left: auto;
 	margin-right: auto;
@@ -191,8 +293,10 @@ figure.wp-block-pullquote {
 
 .wp-block-image {
 
-	margin-bottom: $grid-line-height * $grid-line-height-multiplier;
+	margin: 0 0 ( $grid-line-height ) 0;
 
+	> a,
+	> a > img,
 	> img {
 
 		display: block;
@@ -257,48 +361,142 @@ figure.wp-block-pullquote {
 
 }
 
+
+/**
+ * Buttons.
+ * These are no longer wrapped in a container since Gutenberg has made them a
+ * single element.
+ */
 .wp-block-button {
+
+	text-align: center;
+
+	&.alignleft {
+
+		text-align: left;
+
+	}
+
+	&.alignright {
+
+		text-align: right;
+
+	}
+
+	&.aligncenter {
+
+		text-align: center;
+
+	}
 
 	&.is-style-outline {
 
-		.wp-block-button__link:not( .has-text-color ) {
-			background: white;
-			color: black;
-		}
+		border: none;
 
 	}
 
 }
 
-.wp-block-columns {
+.wp-block-button__link {
+
+	@include button();
+
+}
+
+.is-style-outline {
+
+	&.wp-block-button__link:not( .has-text-color ),
+	.wp-block-button__link:not( .has-text-color ) {
+
+		background: $canvas-color;
+		color: contrast( $canvas-color );
+
+	}
+
+}
+
+.is-style-squared {
+
+	&.wp-block-button__link,
+	.wp-block-button__link {
+
+		border-radius: 0;
+
+	}
+
+}
+
+// Columns.
+.wp-block-columns:not( [data-type="core/columns"] ) {
+
+	margin-left: ( $grid-gutter / -2 );
+	margin-right: ( $grid-gutter / -2 );
+	width: calc( 100% + #{$grid-gutter} );
 
 	.wp-block-column {
 
-		padding-left: ( $grid-gutter / 4 );
-		padding-right: ( $grid-gutter / 4 );
-
-		&:first-child {
-
-			padding-left: 0;
-			padding-right: ( $grid-gutter / 4 );
-
-		}
-
-		&:last-child {
-
-			padding-right: 0;
-			padding-left: ( $grid-gutter / 4 );
-
-		}
+		padding-left: ( $grid-gutter / 2 );
+		padding-right: ( $grid-gutter / 2 );
+		margin: 0;
 
 	}
 
 }
 
-// Coblocks (which seems to be supported by WordPress.com?)
+
+.wp-block-file {
+
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+}
+
+/**
+ * Coblocks.
+ */
 .wp-block-coblocks-dynamic-separator {
 
 	visibility: hidden;
 
 }
 
+/**
+ * Full site editing by Automattic.
+ */
+// Blog post list
+// Includes singular prefix for css specificity reasons.
+.wp-block-newspack-blocks-homepage-articles,
+.singular .wp-block-newspack-blocks-homepage-articles {
+
+	article {
+
+		margin-bottom: $grid-line-height;
+
+	}
+
+	&.is-style-borders {
+
+		article{
+
+			padding-bottom: $grid-line-height;
+
+		}
+
+	}
+
+	.post-thumbnail {
+
+		margin-bottom: ( $grid-line-height / 4 );
+
+		img,
+		a {
+
+			display: block;
+
+		}
+
+	}
+
+}
