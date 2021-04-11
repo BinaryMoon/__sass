@@ -10,6 +10,7 @@ body.block-editor-page div.editor-post-title__block {
 		font-weight: $block-title-weight;
 		text-align: $block-title-align;
 		color: $block-title-color;
+		line-height: 1.1;
 
 	}
 
@@ -45,5 +46,17 @@ body.block-editor-page div.editor-post-title__block {
 		padding-right: ( $grid-gutter / 2 );
 
 	}
+
+}
+
+
+[data-align=full] .wp-block-group.has-background>.wp-block-group__inner-container>[data-align=full],
+.wp-block-group.has-background>.wp-block-group__inner-container>[data-align=full],
+.block-editor-block-list__layout .block-editor-block-list__block.alignfull,
+.block-editor-block-list__layout .block-editor-block-list__block[data-align=full] {
+
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
 
 }
