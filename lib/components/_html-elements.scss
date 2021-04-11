@@ -73,12 +73,6 @@ blockquote {
 
 		@include post-cite;
 
-		&:before {
-
-			content: "\2014\00a0";
-
-		}
-
 	}
 
 	blockquote {
@@ -120,22 +114,7 @@ table {
 	td {
 
 		padding: ( $grid-line-height / 2 ) $style-element-spacing;
-		border-bottom: 1px solid rgba( $border-color, $style-opacity-separator );
 		vertical-align: top;
-
-	}
-
-	tr {
-
-		&:last-child {
-
-			td {
-
-				border: none;
-
-			}
-
-		}
 
 	}
 
