@@ -13,6 +13,7 @@
 .wp-block-gallery,
 .wp-block-group,
 .wp-block-media-text__media,
+.wp-block-media-text,
 .wp-block-pullquote,
 .wp-block-quote,
 .wp-block-search {
@@ -40,8 +41,7 @@
 	clear: both;
 	width: 100%;
 
-	.alignfull,
-	.alignwide {
+	.alignfull {
 
 		margin-inline-start: 0 !important;
 		width: 100% !important;
@@ -53,7 +53,7 @@
 
 .alignfull {
 
-	.wp-block-columns {
+	> .wp-block-columns {
 
 		&:not(.alignwide),
 		&:not(.alignfull) {
@@ -108,15 +108,17 @@
 
 	&.has-background {
 
-		padding: $grid-line-height ( $grid-gutter / 2 );
+		// Always use 30px for the horizontal spacing so that it matches the editor size.
+		padding: $grid-line-height 30px;
 
 	}
 
 	&.alignfull,
 	&.alignfull:not(.has-background) .wp-block-columns {
 
-		padding-left: ( $grid-gutter / 2 );
-		padding-right: ( $grid-gutter / 2 );
+		// Smaller padding for columns inside a block of some sort.
+		// padding-left: ( $grid-gutter / 4 );
+		// padding-right: ( $grid-gutter / 4 );
 
 	}
 
@@ -152,12 +154,24 @@ p.wp-block-subhead {
 
 	&.is-style-solid-color {
 
-		blockquote {
+		&:not(.has-background) {
 
 			background: $canvas-color;
-			color: contrast( $canvas-color );
+
+		}
+
+		blockquote {
+
+			background: transparent;
+			max-width: 100%;
 			margin-left: auto;
 			margin-right: auto;
+
+			&:not(.has-text-color) {
+
+				color: contrast( $canvas-color );
+
+			}
 
 			p {
 
@@ -177,10 +191,17 @@ p.wp-block-subhead {
 
 	}
 
+	&.is-large,
 	&.is-style-large {
 
 		padding: ( $grid-line-height ) ( $grid-gutter / 2 );
 		margin-bottom: $grid-line-height;
+
+		p {
+
+			font-style: normal;
+
+		}
 
 		.wp-block-quote__citation,
 		cite {
@@ -293,7 +314,12 @@ figure.wp-block-pullquote {
 
 .wp-block-image {
 
-	margin: 0 0 ( $grid-line-height ) 0;
+	figure {
+
+		margin: 0 0 ( $grid-line-height ) 0;
+
+	}
+
 
 	> a,
 	> a > img,
@@ -323,6 +349,62 @@ figure.wp-block-pullquote {
 
 		}
 
+	}
+
+}
+
+
+.wp-block-table {
+
+	margin-bottom: $grid-line-height;
+
+	table {
+
+		margin-top: 0;
+		margin-bottom: 0;
+
+	}
+
+	figcaption {
+
+		@include modular-scale( eta );
+		text-align: center;
+		margin: ( $grid-line-height / 2 ) ( $grid-gutter / 2 );
+
+	}
+
+	th, td {
+
+		padding: 1rem;
+		border: 1px solid $canvas-grey-10;
+
+	}
+
+	&.is-style-stripes {
+
+		border: $border-width solid $canvas-grey-20;
+
+		th, td {
+
+			border: none;
+
+		}
+
+		tbody {
+
+			tr:nth-child(odd) {
+
+				background: $canvas-white;
+
+			}
+
+			tr:nth-child(even) {
+
+				background: $canvas-grey-5;
+
+			}
+
+		}
 	}
 
 }
@@ -361,6 +443,18 @@ figure.wp-block-pullquote {
 
 }
 
+.has-background-dim {
+
+	a:not(.wp-block-button__link) {
+
+		color: white;
+		text-decoration: underline;
+
+	}
+
+}
+
+
 
 /**
  * Buttons.
@@ -368,8 +462,6 @@ figure.wp-block-pullquote {
  * single element.
  */
 .wp-block-button {
-
-	text-align: center;
 
 	&.alignleft {
 
@@ -408,19 +500,45 @@ figure.wp-block-pullquote {
 	&.wp-block-button__link:not( .has-text-color ),
 	.wp-block-button__link:not( .has-text-color ) {
 
-		background: $canvas-color;
 		color: contrast( $canvas-color );
+
+		.wp-block-cover.has-background-dim & {
+
+			color: white;
+			text-shadow: 0 0 0.2em rgba( black, 0.75 );
+			box-shadow: 0 0 0.5em rgba( black, 0.25 );
+
+		}
 
 	}
 
 }
 
+
+.no-border-radius,
 .is-style-squared {
 
 	&.wp-block-button__link,
 	.wp-block-button__link {
 
 		border-radius: 0;
+
+	}
+
+}
+
+[data-type="core/heading"] {
+
+	clear: both;
+
+}
+
+[data-type="core/social-links"][data-align="center"] {
+
+	.block-editor-inner-blocks {
+
+		margin-left: auto;
+		margin-right: auto;
 
 	}
 
@@ -473,12 +591,14 @@ figure.wp-block-pullquote {
 	article {
 
 		margin-bottom: $grid-line-height;
+		padding-left: 0 !important;
+		padding-right: 0 !important;
 
 	}
 
 	&.is-style-borders {
 
-		article{
+		article {
 
 			padding-bottom: $grid-line-height;
 
@@ -497,6 +617,18 @@ figure.wp-block-pullquote {
 
 		}
 
+	}
+
+}
+
+// Newspack slides.
+article.swiper-slide {
+
+	margin: 0;
+	padding: 0 !important;
+
+	.entry-title {
+		color: white;
 	}
 
 }
